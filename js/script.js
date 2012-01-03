@@ -1,17 +1,15 @@
-/*
+//
+// Author:     Andrew Appleton
+// Author URL: http://floatleft.com/
+//
+// Contents:
+//
+// 1. Global Scripts
+// 2. Modules
+// 3. Pages
 
-Author:     Andrew Appleton
-Author URL: http://floatleft.com/
 
-Contents:
-
-1. Global Scripts
-2. Modules
-3. Pages
-
-*/
-
-/************************ 1. Global Scripts  ************************************/
+//*********************** 1. Global Scripts  ***********************************
 // Global object - all modules live under this
 window.App = window.App || {};
 
@@ -24,7 +22,7 @@ App.htmlID = function(id, fn){
   });
 };
 
-/************************ 2. Modules  *******************************************/
+//************************ 2. Modules  *****************************************
 // All modules to follow this pattern
 App.ModuleName = function(){
   var publics, privates;
@@ -54,8 +52,9 @@ App.SubModule = function(){
   return publics;
 };
 
-/************************ 3. Pages  *********************************************/
+//************************ 3. Pages  *******************************************
 // Everything in this section scoped to <html> ID
 App.htmlID('index', function(){
+  //Instatiate a module object
   var myModule = App.SubModule();
 });
